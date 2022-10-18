@@ -49,7 +49,10 @@
     flex-wrap: wrap;
   }
   &__link {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    height: 100%;
     text-decoration: none;
     color: inherit;
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -100,7 +103,7 @@
 .portfolio-card {
   padding: 20px 24px;
   width: 450px;
-
+  flex-grow: 1;
   border-bottom: 1px solid var(--card-border-color);
   border-right: 1px solid var(--card-border-color);
   border-left: 1px solid var(--card-border-color);
