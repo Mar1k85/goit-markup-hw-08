@@ -1,29 +1,59 @@
 .hero-wrap {
-  padding-top: 94px;
   max-width: 1600px;
+
   margin: 0 auto;
+  background-size: cover;
   background-image: linear-gradient(to right, #2f303a66, #2f303a66),
-    url(../images/hero-Img.jpg);
+    url(../images/hero/hero-Img-mob@1x.jpg);
+  @include retina {
+    background-image: linear-gradient(to right, #2f303a66, #2f303a66),
+      url(../images/hero/hero-Img-mob@2x.jpg);
+  }
+  @include tablet {
+    background-image: linear-gradient(to right, #2f303a66, #2f303a66),
+      url(../images/hero/hero-Img-tab@1x.jpg);
+    @include retina {
+      background-image: linear-gradient(to right, #2f303a66, #2f303a66),
+        url(../images/hero/hero-Img-tab@2x.jpg);
+    }
+  }
+  @include desktop {
+    height: auto;
+    background-image: linear-gradient(to right, #2f303a66, #2f303a66),
+      url(../images/hero/hero-Img-desk@1x.jpg);
+    @include retina {
+      background-image: linear-gradient(to right, #2f303a66, #2f303a66),
+        url(../images/hero/hero-Img-desk@2x.jpg);
+    }
+  }
 }
 .hero {
   text-align: center;
-  padding-bottom: 200px;
-  padding-top: 106px;
+  padding-bottom: 58px;
+  padding-top: 58px;
+  @include desktop {
+    padding-bottom: 106px;
+    padding-top: 106px;
+  }
   &__title {
+    @include font(26px, 1.61);
     margin: 0 auto;
     margin-bottom: 30px;
-    max-width: 696px;
+    max-width: 360px;
 
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--hero-primary-color);
+
+    @include desktop {
+      max-width: 696px;
+      @include font(44px, 1.36);
+    }
   }
   &__button {
-    padding: 10px 32px;
+    padding: 10px 24px;
 
     color: var(--hero-primary-color);
     font-weight: 700;
@@ -39,6 +69,9 @@
     &:focus,
     &:hover {
       background-color: var(--secondary-bthbckgrd-color);
+    }
+    @include desktop {
+      padding: 10px 32px;
     }
   }
 }

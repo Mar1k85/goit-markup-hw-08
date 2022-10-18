@@ -15,16 +15,17 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/main.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Webstudio</title>
   </head>
   <body>
     <!-- header -->
     <header class="page-header">
       <div class="container header-nav">
+        <a href="./index.html" lang="en" class="logo header-logo"
+          ><span class="logo__text">Web</span>Studio</a
+        >
         <nav class="navigation">
-          <a href="./index.html" lang="en" class="logo header-logo"
-            ><span class="logo__text">Web</span>Studio</a
-          >
           <ul class="navigation__list list">
             <li class="navigation__item item">
               <a href="./index.html" class="navigation__link link">Студія</a>
@@ -41,24 +42,37 @@
             </li>
           </ul>
         </nav>
-        <ul class="contacts list">
-          <li class="contacts__item">
-            <a href="mailto:info@devstudio.com" class="contacts__link link">
-              <svg class="contacts__icon" width="16" height="12">
+        <ul class="contacts-list list">
+          <li class="contacts-list__item">
+            <a
+              href="mailto:info@devstudio.com"
+              class="contacts-list__link link"
+            >
+              <svg class="contacts-list__icon" width="16" height="12">
                 <use href="./images/icons.svg#icon-mail"></use>
               </svg>
               info@devstudio.com</a
             >
           </li>
-          <li class="item">
-            <a href="tel:+380961111111" class="contacts__link link">
-              <svg class="contacts__icon" width="10" height="16">
+          <li class="contacts-list__item">
+            <a href="tel:+380961111111" class="contacts-list__link link">
+              <svg class="contacts-list__icon" width="10" height="16">
                 <use href="./images/icons.svg#icon-phone"></use>
               </svg>
               +38 096 111 11 11</a
             >
           </li>
         </ul>
+        <button
+          type="button"
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="menu-btn__icon" width="24" height="16">
+            <use href="./images/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
       </div>
     </header>
     <!-- main -->
@@ -89,12 +103,35 @@
             <li class="portfolio-list__item">
               <a href="" class="portfolio-list__link">
                 <div class="overlay">
-                  <img
-                    src="./images/portfolioimg1.jpg"
-                    alt="web site company"
-                    width="370"
-                    class="overlay__image"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/desktop/porfolio-img-1-@1x.jpg 1x,
+                        ./images/portfolio/desktop/porfolio-img-1-@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/tablet/porfolio-img-1-tab@1x.jpg 1x,
+                        ./images/portfolio/tablet/porfolio-img-1-tab@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/mobile/porfolio-img-1-mob@1x.jpg 1x,
+                        ./images/portfolio/mobile/porfolio-img-1-mob@2x.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img
+                      src="./images/portfolio/desktop/porfolio-img-1-@1x.jpg"
+                      alt="web site company"
+                      width="370"
+                      class="overlay__image"
+                    />
+                  </picture>
 
                   <p class="overlay__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -113,12 +150,35 @@
             <li class="portfolio-list__item">
               <a href="" class="portfolio-list__link">
                 <div class="overlay">
-                  <img
-                    src="./images/portfolioimg2.jpg"
-                    alt="web site company"
-                    width="370"
-                    class="overlay__image"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/desktop/porfolio-img-2-@1x.jpg 1x,
+                        ./images/portfolio/desktop/porfolio-img-2-@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/tablet/porfolio-img-2-tab@1x.jpg 1x,
+                        ./images/portfolio/tablet/porfolio-img-2-tab@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/mobile/porfolio-img-2-mob@1x.jpg 1x,
+                        ./images/portfolio/mobile/porfolio-img-2-mob@2x.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img
+                      src="./images/portfolio/desktop/porfolio-img-2-@1x.jpg"
+                      alt="web site company"
+                      width="370"
+                      class="overlay__image"
+                    />
+                  </picture>
 
                   <p class="overlay__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -138,12 +198,35 @@
             <li class="portfolio-list__item">
               <a href="" class="portfolio-list__link">
                 <div class="overlay">
-                  <img
-                    src="./images/portfolioimg3.jpg"
-                    alt="web site company"
-                    width="370"
-                    class="overlay__image"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/desktop/porfolio-img-3-@1x.jpg 1x,
+                        ./images/portfolio/desktop/porfolio-img-3-@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/tablet/porfolio-img-3-tab@1x.jpg 1x,
+                        ./images/portfolio/tablet/porfolio-img-3-tab@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/mobile/porfolio-img-3-mob@1x.jpg 1x,
+                        ./images/portfolio/mobile/porfolio-img-3-mob@2x.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img
+                      src="./images/portfolio/desktop/porfolio-img-3-@1x.jpg"
+                      alt="web site company"
+                      width="370"
+                      class="overlay__image"
+                    />
+                  </picture>
 
                   <p class="overlay__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -161,12 +244,35 @@
             <li class="portfolio-list__item">
               <a href="" class="portfolio-list__link">
                 <div class="overlay">
-                  <img
-                    src="./images/portfolioimg4.jpg"
-                    alt="web site company"
-                    width="370"
-                    class="overlay__image"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/desktop/porfolio-img-4-@1x.jpg 1x,
+                        ./images/portfolio/desktop/porfolio-img-4-@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/tablet/porfolio-img-4-tab@1x.jpg 1x,
+                        ./images/portfolio/tablet/porfolio-img-4-tab@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/mobile/porfolio-img-4-mob@1x.jpg 1x,
+                        ./images/portfolio/mobile/porfolio-img-4-mob@2x.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img
+                      src="./images/portfolio/desktop/porfolio-img-4-@1x.jpg"
+                      alt="web site company"
+                      width="370"
+                      class="overlay__image"
+                    />
+                  </picture>
 
                   <p class="overlay__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -184,12 +290,35 @@
             <li class="portfolio-list__item">
               <a href="" class="portfolio-list__link">
                 <div class="overlay">
-                  <img
-                    src="./images/portfolioimg5.jpg"
-                    alt="web site company"
-                    width="370"
-                    class="overlay__image"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/desktop/porfolio-img-5-@1x.jpg 1x,
+                        ./images/portfolio/desktop/porfolio-img-5-@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/tablet/porfolio-img-5-tab@1x.jpg 1x,
+                        ./images/portfolio/tablet/porfolio-img-5-tab@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/mobile/porfolio-img-5-mob@1x.jpg 1x,
+                        ./images/portfolio/mobile/porfolio-img-5-mob@2x.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img
+                      src="./images/portfolio/desktop/porfolio-img-5-@1x.jpg"
+                      alt="web site company"
+                      width="370"
+                      class="overlay__image"
+                    />
+                  </picture>
 
                   <p class="overlay__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -207,12 +336,35 @@
             <li class="portfolio-list__item">
               <a href="" class="portfolio-list__link">
                 <div class="overlay">
-                  <img
-                    src="./images/portfolioimg6.jpg"
-                    alt="web site company"
-                    width="370"
-                    class="overlay__image"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/desktop/porfolio-img-6-@1x.jpg 1x,
+                        ./images/portfolio/desktop/porfolio-img-6-@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/tablet/porfolio-img-6-tab@1x.jpg 1x,
+                        ./images/portfolio/tablet/porfolio-img-6-tab@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/mobile/porfolio-img-6-mob@1x.jpg 1x,
+                        ./images/portfolio/mobile/porfolio-img-6-mob@2x.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img
+                      src="./images/portfolio/desktop/porfolio-img-6-@1x.jpg"
+                      alt="web site company"
+                      width="370"
+                      class="overlay__image"
+                    />
+                  </picture>
 
                   <p class="overlay__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -232,12 +384,35 @@
             <li class="portfolio-list__item">
               <a href="" class="portfolio-list__link">
                 <div class="overlay">
-                  <img
-                    src="./images/portfolioimg7.jpg"
-                    alt="web site company"
-                    width="370"
-                    class="overlay__image"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/desktop/porfolio-img-7-@1x.jpg 1x,
+                        ./images/portfolio/desktop/porfolio-img-7-@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/tablet/porfolio-img-7-tab@1x.jpg 1x,
+                        ./images/portfolio/tablet/porfolio-img-7-tab@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/mobile/porfolio-img-7-mob@1x.jpg 1x,
+                        ./images/portfolio/mobile/porfolio-img-7-mob@2x.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img
+                      src="./images/portfolio/desktop/porfolio-img-7-@1x.jpg"
+                      alt="web site company"
+                      width="370"
+                      class="overlay__image"
+                    />
+                  </picture>
 
                   <p class="overlay__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -255,12 +430,35 @@
             <li class="portfolio-list__item">
               <a href="" class="portfolio-list__link">
                 <div class="overlay">
-                  <img
-                    src="./images/portfolioimg8.jpg"
-                    alt="web site company"
-                    width="370"
-                    class="overlay__image"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/desktop/porfolio-img-8-@1x.jpg 1x,
+                        ./images/portfolio/desktop/porfolio-img-8-@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/tablet/porfolio-img-8-tab@1x.jpg 1x,
+                        ./images/portfolio/tablet/porfolio-img-8-tab@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/mobile/porfolio-img-8-mob@1x.jpg 1x,
+                        ./images/portfolio/mobile/porfolio-img-8-mob@2x.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img
+                      src="./images/portfolio/desktop/porfolio-img-8-@1x.jpg"
+                      alt="web site company"
+                      width="370"
+                      class="overlay__image"
+                    />
+                  </picture>
 
                   <p class="overlay__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -278,12 +476,35 @@
             <li class="portfolio-list__item">
               <a href="" class="portfolio-list__link">
                 <div class="overlay">
-                  <img
-                    src="./images/portfolioimg9.jpg"
-                    alt="web site company"
-                    width="370"
-                    class="overlay__image"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/desktop/porfolio-img-9-@1x.jpg 1x,
+                        ./images/portfolio/desktop/porfolio-img-9-@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/tablet/porfolio-img-9-tab@1x.jpg 1x,
+                        ./images/portfolio/tablet/porfolio-img-9-tab@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/mobile/porfolio-img-9-mob@1x.jpg 1x,
+                        ./images/portfolio/mobile/porfolio-img-9-mob@2x.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img
+                      src="./images/portfolio/desktop/porfolio-img-9-@1x.jpg"
+                      alt="web site company"
+                      width="370"
+                      class="overlay__image"
+                    />
+                  </picture>
 
                   <p class="overlay__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -303,7 +524,7 @@
       </section>
     </main>
     <!-- footer -->
-    <footer class="footer">
+    <footer class="footer section">
       <div class="container footer-wrap">
         <div class="addr-wrap">
           <a href="./index.html" lang="en" class="logo footer-logo"
@@ -384,8 +605,8 @@
         </div>
         <div class="join-box">
           <p class="join-box__text">Підпишіться на розсилку</p>
-          <form>
-            <label>
+          <form class="join-form">
+            <label class="join-form__lable">
               <input
                 type="email"
                 name="email"
@@ -403,5 +624,92 @@
         </div>
       </div>
     </footer>
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg class="menu-toggle__icon" width="19" height="19">
+          <use href="./images/icons.svg#icon-close-black"></use>
+        </svg>
+      </button>
+      <nav class="mobile-nav">
+        <ul class="mobile-nav__list list">
+          <li class="mobile-nav__item item">
+            <a href="./index.html" class="mobile-nav__link link">Студія</a>
+          </li>
+          <li class="mobile-nav__item item">
+            <a href="./portfolio.html" class="mobile-nav__link link"
+              >Портфоліо</a
+            >
+          </li>
+          <li class="mobile-nav__item item">
+            <a href="" class="mobile-nav__link link">Контакти</a>
+          </li>
+        </ul>
+        <ul class="mobile-contacts-list list">
+          <li class="mobile-contacts-list__item">
+            <a
+              href="tel:+380961111111"
+              class="mobile-contacts-list__link mobile-contacts-list__link--blue link"
+            >
+              +38 096 111 11 11</a
+            >
+          </li>
+          <li class="mobile-contacts-list__item">
+            <a
+              href="mailto:info@devstudio.com"
+              class="mobile-contacts-list__link link"
+            >
+              info@devstudio.com</a
+            >
+          </li>
+        </ul>
+        <ul class="mobile-social-list list">
+          <li class="mobile-social-list__item">
+            <a
+              href=""
+              rel="noopener noreferrer nofollow"
+              target="_blank"
+              class="mobile-social-list__link link"
+              >Instagram</a
+            >
+          </li>
+          <li class="mobile-social-list__item">
+            <a
+              href=""
+              rel="noopener noreferrer nofollow"
+              target="_blank"
+              class="mobile-social-list__link link"
+              >Twitter</a
+            >
+          </li>
+          <li class="mobile-social-list__item">
+            <a
+              href=""
+              rel="noopener noreferrer nofollow"
+              target="_blank"
+              class="mobile-social-list__link link"
+            >
+              Facebook</a
+            >
+          </li>
+          <li class="mobile-social-list_item">
+            <a
+              href=""
+              rel="noopener noreferrer nofollow"
+              target="_blank"
+              class="mobile-social-list__link link"
+              >LinkedIn</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
