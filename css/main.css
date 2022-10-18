@@ -544,6 +544,11 @@ ul {
     padding-bottom: 32px;
   }
 }
+@media screen and (min-width: 768px) {
+  .contacts-list__link {
+    font-size: 12px;
+  }
+}
 
 .hero-wrap {
   max-width: 1600px;
