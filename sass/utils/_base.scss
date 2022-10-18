@@ -9,10 +9,13 @@
   }
 }
 .container {
-  width: 480px;
+  width: 320px;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
+  @include mobile {
+    width: 480px;
+  }
 
   @include tablet {
     width: 768px;
@@ -22,8 +25,12 @@
   }
 }
 .section {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  @include mobile {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
   @include desktop {
     padding-top: 94px;
     padding-bottom: 94px;

@@ -85,8 +85,13 @@
   }
   &__image {
     display: block;
-    width: 450px;
-    height: 294px;
+    width: 100%;
+    height: auto;
+    object-fit: fill;
+    @include mobile {
+      width: 100%;
+      height: auto;
+    }
     @include tablet {
       width: 354px;
     }
@@ -102,11 +107,14 @@
 }
 .portfolio-card {
   padding: 20px 24px;
-  width: 450px;
+  width: 290px;
   flex-grow: 1;
   border-bottom: 1px solid var(--card-border-color);
   border-right: 1px solid var(--card-border-color);
   border-left: 1px solid var(--card-border-color);
+  @include mobile {
+    width: 450px;
+  }
   @include tablet {
     width: 354px;
   }
