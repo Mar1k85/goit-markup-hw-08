@@ -12,6 +12,9 @@
     justify-content: space-around;
     align-items: baseline;
   }
+  @include desktop {
+    text-align: left;
+  }
 }
 .footer-socials {
   margin-bottom: 60px;
@@ -102,6 +105,7 @@
   }
   @include desktop {
     margin-left: 94px;
+    align-items: flex-start;
   }
 }
 

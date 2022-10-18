@@ -45,6 +45,9 @@
       color: var(--accent-text-color);
     }
     outline: none;
+    &--active {
+      color: var(--accent-text-color);
+    }
   }
 }
 .mobile-contacts-list {
