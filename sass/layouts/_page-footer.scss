@@ -1,6 +1,7 @@
 .footer.section {
   @include desktop {
     padding-top: 60px;
+    padding-bottom: 60px;
   }
   background-color: var(--footer-bckgrd-color);
 }
