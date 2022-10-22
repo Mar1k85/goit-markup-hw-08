@@ -1,4 +1,7 @@
-.footer {
+.footer.section {
+  @include desktop {
+    padding-top: 60px;
+  }
   background-color: var(--footer-bckgrd-color);
 }
 .footer-wrap {
